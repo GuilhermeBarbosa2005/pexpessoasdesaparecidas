@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Busca de Desaparecidos{% endblock %}
+
+{% block head_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style_index.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='busca.css') }}">
+{% endblock %}
+
+{% block content %}
+    
+    <div class="header-content-top">
+        <a href="{{ url_for('index') }}" class="btn-voltar-topo">
+            ← Voltar para a Página Inicial
+        </a>
+    </div>
+    <main class="main-wrapper-busca">
+        <h1>Localize uma Pessoa Desaparecida</h1>
+
+        <label for="campoBusca">Buscar por Nome ou Localização:</label>
+        <input type="text" id="campoBusca" placeholder="Ex: Maria ou Rio de Janeiro">
+        
+        <div id="resultados">
+            <p>Carregando dados...</p>
+        </div>
+    </main>
+    
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='busca_logica.js') }}"></script>
+{% endblock %}

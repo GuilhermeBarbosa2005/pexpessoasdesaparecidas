@@ -1,0 +1,276 @@
+/*
+ * style_index.css - Estilo final baseado em "DATA.IO": tela cheia, alinhamento à esquerda e alto impacto.
+ * Cores: Fundo Escuro, Texto Branco, Destaques em Azul Neon (#4e59ff) e Vermelho (#ff4e59).
+ */
+
+/* =================================================================== */
+/* Estilos Base e Fundo (Tela Cheia com Imagem) */
+/* =================================================================== */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white; 
+    
+    /* Configuração da Imagem de Fundo */
+    background-image: url('/static/plano-de-fundo-da-area-de-trabalho-moderno-vetor-de-desenho-geometrico-azul_53876-135923.jpg'); /* Caminho corrigido para o Flask */
+    background-size: cover; 
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    /* Usa Flexbox para centralizar o conteúdo principal */
+    display: flex;
+    flex-direction: column; /* Necessário para o header fixo */
+    justify-content: center; 
+    align-items: center;
+    min-height: 100vh;
+    padding: 0; /* Remove padding do body, ele será controlado pelo wrapper e menu */
+}
+
+/* =================================================================== */
+/* ESTILOS DO HEADER DE NAVEGAÇÃO FIXO (Topo da Página) */
+/* =================================================================== */
+
+.menu-principal {
+    position: fixed; /* Fixa o menu no topo da tela */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+    
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    border-bottom: 1px solid #4e59ff; /* Linha divisória neon */
+    padding: 15px 50px;
+    display: flex; 
+    justify-content: flex-end; /* Alinha os botões à direita */
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box; /* Inclui padding na largura */
+}
+
+.menu-principal a {
+    text-decoration: none;
+    color: white; 
+    font-weight: 500;
+    margin-left: 25px; 
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    border: 1px solid transparent; 
+}
+
+.menu-principal a.logo-project { 
+    margin-right: auto; 
+    color: #ff4e59; 
+    font-size: 1.5em; 
+    font-weight: bold;
+    border: none;
+    padding: 0;
+    margin-left: 0;
+}
+
+.menu-principal a:hover {
+    color: #4e59ff; 
+    background-color: rgba(78, 89, 255, 0.1);
+    border: 1px solid #4e59ff;
+    box-shadow: 0 0 10px rgba(78, 89, 255, 0.5); 
+}
+
+/* Estilo para o botão de destaque (Mapa Mental) */
+.menu-principal .btn-destaque {
+    background-color: #ff4e59; 
+    color: white;
+    font-weight: bold;
+    border: 1px solid #ff4e59;
+    padding: 8px 20px;
+}
+
+.menu-principal .btn-destaque:hover {
+    background-color: #e63e48;
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 78, 89, 0.8);
+}
+
+
+/* =================================================================== */
+/* Wrapper Principal do Conteúdo (main-wrapper) */
+/* =================================================================== */
+.main-wrapper {
+    /* Container que hospeda todo o texto e botões, alinhado à esquerda */
+    max-width: 900px; 
+    width: 90%;
+    text-align: left; /* Alinhamento principal à esquerda */
+    padding: 0 40px; 
+    margin: 80px auto 40px auto; /* Adicionado margem superior para compensar o header fixo */
+    /* Remove o fundo semi-transparente e o box-shadow deste elemento */
+    background-color: transparent; 
+    box-shadow: none;
+    backdrop-filter: none;
+}
+
+/* Remove os estilos de bloco/cartão do header e menu da página principal */
+header, .menu {
+    max-width: none; 
+    width: 100%;
+    margin-bottom: 0; 
+    padding: 0; 
+    background-color: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+    text-align: left;
+}
+
+
+/* =================================================================== */
+/* Estilos do Cabeçalho - Título de Alto Impacto */
+/* =================================================================== */
+header {
+    margin-bottom: 40px;
+}
+
+header h1 {
+    color: white; /* Cor branca para o título principal (alto impacto) */
+    font-size: 4em; /* MUITO GRANDE para impacto */
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    /* AJUSTE: Sombra de texto removida ou simplificada para evitar o efeito "ghost" (contorno) */
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8); 
+}
+
+/* Estilo para o parágrafo principal (Subtítulo) */
+.intro-text {
+    color: #ccc; 
+    font-size: 1.2em;
+    font-weight: 300; 
+    line-height: 1.5;
+    max-width: 650px; 
+    margin-bottom: 20px;
+}
+
+/* Estilo para o texto pequeno/detalhe */
+.small-text-detail {
+    color: #888;
+    font-size: 0.9em;
+    line-height: 1.5;
+    max-width: 650px;
+    margin-bottom: 20px;
+}
+
+/* Estilos de h2 (Nosso Propósito) */
+header h2, .menu h2 {
+    color: #4e59ff; /* Azul Neon para destacar a seção */
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+/* =================================================================== */
+/* Estilos do Menu/Propósito e Botões DA PÁGINA INICIAL */
+/* =================================================================== */
+.menu {
+    margin-top: 40px;
+    padding: 0;
+}
+
+/* Agrupamento de botões */
+.buttons-group {
+    display: flex;
+    gap: 20px; /* Espaço entre os botões */
+    margin-top: 25px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 18px 30px;
+    border-radius: 4px; /* Bordas mais quadradas para um visual moderno */
+    font-size: 1.1em;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    display: inline-block; /* Permite que fiquem lado a lado */
+}
+
+/* Botão Principal: Vermelho/Coral (Urgência) */
+.btn-principal {
+    background-color: #ff4e59; 
+    color: white; 
+    border: none;
+}
+
+.btn-principal:hover {
+    background-color: #e63e48;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 78, 89, 0.6);
+}
+
+/* Botão Secundário: Fundo Transparente com Borda (Visual limpo) */
+.btn-secundario {
+    background-color: transparent; 
+    color: #4e59ff; 
+    border: 2px solid #4e59ff; 
+}
+
+.btn-secundario:hover {
+    background-color: #4e59ff; 
+    color: #1a1a1a; 
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(78, 89, 255, 0.6);
+}
+
+/* =================================================================== */
+/* Estilos do Rodapé */
+/* =================================================================== */
+footer {
+    position: fixed; /* Fixa o rodapé na parte inferior */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.3); /* Fundo levemente escuro */
+}
+
+footer p {
+    font-size: 0.75em;
+    color: #666; /* Cor discreta */
+    margin: 0;
+    text-shadow: none; /* Remove a sombra do texto para um visual mais limpo */
+}
+
+/* =================================================================== */
+/* Responsividade (Mobile) */
+/* =================================================================== */
+@media (max-width: 768px) {
+    .main-wrapper {
+        padding: 0 20px;
+        margin-top: 60px; /* Ajuste para o header fixo em mobile */
+    }
+    
+    .menu-principal {
+        padding: 10px 20px;
+    }
+    
+    header h1 {
+        font-size: 2.5em; 
+    }
+
+    .intro-text, .small-text-detail {
+        font-size: 1em;
+    }
+    
+    .buttons-group {
+        flex-direction: column; /* Coloca os botões um abaixo do outro */
+        gap: 15px;
+    }
+    
+    .btn {
+        width: 100%; /* Botões ocupam toda a largura */
+        text-align: center;
+    }
+}

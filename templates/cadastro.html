@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}Cadastrar Desaparecido - Ajude a Encontrar{% endblock %}
+
+{% block head_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style_index.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='cadastro.css') }}">
+{% endblock %}
+
+{% block content %}
+    
+    <a href="{{ url_for('index') }}" class="btn-voltar-topo">
+        ← Voltar para a Página Inicial
+    </a>
+    
+    <main class="cadastro-wrapper">
+        <header>
+            <h1>Cadastro de Pessoa Desaparecida</h1>
+            <p>Preencha os dados com o máximo de detalhes possível. A foto é essencial!</p>
+        </header>
+        
+        <form action="/cadastro" method="POST" enctype="multipart/form-data">
+
+            <section class="dados-pessoais">
+                <h2>1. Identificação</h2>
+                
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="data-nasc">Data de Nascimento:</label>
+                <input type="date" id="data-nasc" name="data_nascimento" required>
+                
+                <label for="contato-tel">Telefone de Contato (Notificante):</label>
+                <input type="tel" id="contato-tel" name="telefone_contato" placeholder="(XX) XXXXX-XXXX" required>
+
+                <label for="foto">Foto Recente (Obrigatório):</label>
+                <input type="file" id="foto" name="foto" accept="image/*" required>
+            </section>
+
+            <section class="desaparecimento">
+                <h2>2. Detalhes do Desaparecimento</h2>
+
+                <label for="cidade">Cidade do Desaparecimento:</label>
+                <input type="text" id="cidade" name="cidade" required>
+
+                <label for="estado">Estado (UF) do Desaparecimento:</label>
+                <input type="text" id="estado" name="estado" maxlength="2" placeholder="Ex: SP" required>
+                
+                <label for="data-desap">Data e Hora do Sumiço:</label>
+                <input type="datetime-local" id="data-desap" name="data_desaparecimento" required>
+
+                <label for="local">Ponto de Referência/Circunstâncias:</label>
+                <textarea id="local" name="local_desaparecimento" rows="4" placeholder="Ex: Rua da Paz, 120, vista pela última vez usando camiseta azul."></textarea>
+            </section>
+
+            <section class="caracteristicas">
+                <h2>3. Características Marcantes</h2>
+                <label for="marcas">Tatuagens, Cicatrizes, Roupas, Condições Médicas, etc.:</label>
+                <textarea id="marcas" name="caracteristicas" rows="3" placeholder="Ex: Tatuagem de âncora no braço, vestia calça jeans e tênis preto."></textarea>
+            </section>
+
+            <button type="submit">Cadastrar e Gerar Alerta</button>
+        </form>
+    </main>
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Ajude a Encontrar - Página Inicial{% endblock %}
+
+{% block head_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style_index.css') }}">
+{% endblock %}
+
+
+{% block content %}
+    <div class="main-wrapper">
+        
+        <header>
+            <h1>Uma Rede de Esperança: Juntos na Busca por Quem Desapareceu </h1>
+            
+            <p class="intro-text">Em um mundo cada vez mais interconectado, o desaparecimento de uma pessoa é uma das situações mais angustiantes e urgentes que uma família pode enfrentar. A cada minuto, a incerteza e a dor crescem.</p>
+            
+            <p class="small-text-detail">É fundamental lembrar a importância do cuidado mútuo e da vigilância social. Cuidar não é apenas proteger quem está perto, mas também estender o olhar à comunidade, reconhecendo que a segurança de um impacta a vida de todos. A atenção aos detalhes e a pronta reação de cada cidadão são peças-chave na reconstrução dessas vidas interrompidas.</p>
+        </header>
+
+        <main class="menu">
+            <h2>Nosso Propósito</h2>
+            <p class="small-text-detail">Nascido da urgência de unir forças, este site é uma plataforma dedicada a acelerar a localização de pessoas desaparecidas. Nosso intuito é simples, mas poderoso: reduzir o tempo de espera e ampliar o alcance da busca para além dos métodos tradicionais.</p>
+
+            <div class="buttons-group">
+                <a href="cadastro" class="btn btn-principal">
+                    Cadastrar Pessoa Desaparecida
+                </a>
+            
+                <a href="busca" class="btn btn-secundario">
+                    Ver Pessoas Cadastradas
+                </a>
+            </div>
+        </main>
+        </div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}Fontes de Pesquisa - PEX2025{% endblock %}
+
+{% block head_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style_index.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='fontes.css') }}">
+{% endblock %}
+
+{% block content %}
+    
+    <div class="header-content-top">
+        <a href="{{ url_for('index') }}" class="btn-voltar-topo">
+            ← Voltar para a Página Inicial
+        </a>
+    </div>
+
+    <main class="fontes-wrapper">
+        <header>
+            <h1>Fontes e Referências de Dados</h1>
+            <p class="subtitle">Conheça as principais fontes que inspiraram e alimentaram este projeto.</p>
+        </header>
+
+        <section class="lista-fontes">
+            <h2>Principais Referências</h2>
+                <li>Políticas Públicas sobre Pessoas Desaparecidas - Ministério da Justiça (MJSP)</li>
+                <li>Relatório Anual de Desaparecidos</li>
+                <li>desaparecidosdobrasil.org</li>
+                <li> Biblioteca Digital: Artigos sobre Tecnologia e Localização</li>
+            
+        </section>
+        <h3>Linguagens Usadas</h3>
+        <li>html</li>
+        <li>css</li>
+        <li>java script</li>
+        <li>json</li>
+        <li>python</li>
+
+        </ul>
+    </main>
+    
+{% endblock %}

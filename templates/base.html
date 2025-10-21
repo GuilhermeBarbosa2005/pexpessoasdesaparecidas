@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Ajude a Encontrar{% endblock %}</title>
+    
+    {% block head_css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_index.css') }}">
+    {% endblock %}
+</head>
+<body>
+    
+    <header class="menu-principal">
+        <a href="{{ url_for('envolvidos') }}" class="logo-project">PEX2025</a>
+        
+        <a href="{{ url_for('fontes') }}">Fontes de Pesquisa</a>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    
+    <footer>
+        <p>&copy; Projeto Acadêmico de Localização de Desaparecidos</p>
+    </footer>
+    
+    {% block scripts %}{% endblock %}
+</body>
+</html>

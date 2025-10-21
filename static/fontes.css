@@ -1,0 +1,128 @@
+/*
+ * fontes.css - Estilos para a página de fontes, usando o padrão Neon/Contraste.
+ */
+
+/* =================================================================== */
+/* 1. Estilos Base e Fundo */
+/* =================================================================== */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0; 
+    color: white; 
+    min-height: 100vh;
+    
+    /* Aplica o fundo de alto contraste do projeto (URL deve ser ajustada se necessário) */
+    background-image: url('/static/plano-de-fundo-da-area-de-trabalho-moderno-vetor-de-desenho-geometrico-azul_53876-135923.jpg');
+    background-size: cover; 
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* =================================================================== */
+/* 2. Layout do Conteúdo Principal */
+/* =================================================================== */
+.fontes-wrapper {
+    max-width: 900px;
+    margin: 30px auto 50px auto; 
+    padding: 30px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.75); 
+    border-radius: 10px;
+    border: 1px solid rgba(78, 89, 255, 0.3);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+}
+
+h1 {
+    color: #4e59ff; /* Azul Neon para o título principal */
+    font-size: 2.8em;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(78, 89, 255, 0.5);
+}
+
+h2 {
+    color: #ff4e59; /* Vermelho/Coral Neon */
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgba(255, 78, 89, 0.5);
+    padding-bottom: 10px;
+}
+
+.subtitle {
+    color: #ccc;
+    font-size: 1.1em;
+}
+
+/* =================================================================== */
+/* 3. Estilo da Lista de Fontes (Links) */
+/* =================================================================== */
+.lista-links {
+    list-style: none; 
+    padding: 0;
+    text-align: left;
+    margin: 0 auto;
+}
+
+.fonte-item {
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: rgba(78, 89, 255, 0.08); /* Fundo sutil azul */
+    border-radius: 6px;
+    border-left: 4px solid #ff4e59; /* Borda lateral em Vermelho/Coral */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.fonte-item:hover {
+    background-color: rgba(78, 89, 255, 0.15);
+    transform: translateX(5px);
+}
+
+.fonte-item a {
+    color: white; /* Texto do link branco */
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    display: block;
+}
+
+.fonte-item a:hover {
+    color: #4e59ff; /* Brilho neon no hover do link */
+}
+
+/* =================================================================== */
+/* 4. Estilo do Botão Voltar (Consistência FINAL - Corrigido com !important) */
+/* =================================================================== */
+.header-content-top {
+    width: 100%;
+    padding-top: 80px; 
+    position: relative; 
+    z-index: 10;
+}
+
+.btn-voltar-topo {
+    /* GARANTINDO O ESTILO NEON COM !important PARA PREVALECER SOBRE OUTROS CSS */
+    display: inline-block !important; 
+    visibility: visible !important;   
+    margin-left: 40px; 
+    
+    text-decoration: none !important; /* FORÇA a remoção do sublinhado (principal correção) */
+    color: #4e59ff !important;        /* FORÇA a cor do texto neon */
+    background-color: rgba(78, 89, 255, 0.05) !important; /* FORÇA a cor de fundo */
+    padding: 8px 15px !important;
+    border: 1px solid #4e59ff !important; /* FORÇA a borda neon */
+    border-radius: 4px !important;
+    font-weight: 600 !important;
+    transition: all 0.2s ease;
+    width: fit-content !important;
+}
+
+.btn-voltar-topo:hover {
+    background-color: #4e59ff !important;
+    color: black !important; 
+    box-shadow: 0 0 10px rgba(78, 89, 255, 0.8) !important;
+    transform: translateY(-1px) !important;
+}

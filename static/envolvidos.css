@@ -1,0 +1,124 @@
+/*
+ * envolvidos.css - Estilos para a página de envolvidos, usando o padrão Neon/Contraste.
+ */
+
+/* =================================================================== */
+/* 1. Estilos Base e Fundo (DATA.IO) */
+/* =================================================================== */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0; 
+    color: white; 
+    min-height: 100vh;
+    
+    /* Aplica o fundo de alto contraste do projeto */
+    background-image: url('/static/plano-de-fundo-da-area-de-trabalho-moderno-vetor-de-desenho-geometrico-azul_53876-135923.jpg');
+    background-size: cover; 
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* =================================================================== */
+/* 2. Layout do Conteúdo Principal */
+/* =================================================================== */
+.envolvidos-wrapper {
+    max-width: 800px;
+    margin: 30px auto 50px auto; /* Centraliza o conteúdo principal */
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro semi-transparente */
+    border-radius: 10px;
+    border: 1px solid rgba(78, 89, 255, 0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    color: #ff4e59; /* Vermelho/Coral Neon para Destaque */
+    font-size: 2.8em;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(255, 78, 89, 0.5);
+}
+
+h2 {
+    color: #4e59ff; /* Azul Neon */
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgba(78, 89, 255, 0.5);
+    padding-bottom: 10px;
+}
+
+.subtitle {
+    color: #ccc;
+    font-size: 1.1em;
+}
+
+/* =================================================================== */
+/* 3. Estilo da Lista de Nomes */
+/* =================================================================== */
+.lista-nomes {
+    list-style: none; /* Remove marcadores padrão */
+    padding: 0;
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.membro-item {
+    font-size: 1.3em;
+    font-weight: 500;
+    color: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+    
+    /* Destaque sutil neon */
+    border-left: 5px solid #4e59ff; 
+    background-color: rgba(78, 89, 255, 0.05);
+    transition: background-color 0.3s;
+}
+
+.membro-item:hover {
+    background-color: rgba(78, 89, 255, 0.15);
+}
+
+/* =================================================================== */
+/* 4. Estilo do Botão Voltar (Consistência) */
+/* =================================================================== */
+.header-content-top {
+    width: 100%;
+    padding-top: 80px; 
+    position: relative; 
+    z-index: 10;
+}
+
+.btn-voltar-topo {
+    display: inline-block; 
+    margin-left: 40px; 
+    
+    /* Estilo Neon */
+    text-decoration: none;
+    color: #4e59ff; 
+    background-color: rgba(78, 89, 255, 0.05);
+    padding: 8px 15px;
+    border: 1px solid #4e59ff;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    width: fit-content;
+    
+    /* Forçando a exibição para evitar conflitos */
+    visibility: visible !important;
+    display: inline-block !important;
+}
+
+.btn-voltar-topo:hover {
+    background-color: #4e59ff;
+    color: black; 
+    box-shadow: 0 0 10px rgba(78, 89, 255, 0.8);
+    transform: translateY(-1px);
+}
